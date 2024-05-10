@@ -11,7 +11,7 @@ const App = () => {
         if (cachedArticles) {
           setArticles(JSON.parse(cachedArticles));
         }
-        const response = await fetch("https://captain-news-backend.vercel.app/getNews");
+        const response = await fetch("https://captainnews-backend.onrender.com/getNews");
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -26,7 +26,7 @@ const App = () => {
   }, [])
   const handleTagClick = async (tag) => {
     try {
-      const response = await fetch(`http://localhost:5000/getNews/${tag}`);
+      const response = await fetch(`https://captainnews-backend.onrender.com/${tag}`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
