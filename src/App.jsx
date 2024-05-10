@@ -26,7 +26,7 @@ const App = () => {
   }, [])
   const handleTagClick = async (tag) => {
     try {
-      const response = await fetch(`https://captainnews-backend.onrender.com/${tag}`);
+      const response = await fetch(`https://captainnews-backend.onrender.com/getNews/${tag}`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
