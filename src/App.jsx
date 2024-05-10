@@ -11,7 +11,7 @@ const App = () => {
         if (cachedArticles) {
           setArticles(JSON.parse(cachedArticles));
         }
-        const response = await fetch("http://localhost:5000/getNews");
+        const response = await fetch("https://captain-news-backend.vercel.app/getNews");
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
